@@ -1,37 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap");
 
+:root {
+  --body-font: "Figtree", serif;
+  --normal-font-weight: 500;
+  --bolder-font-weight: 800;
+  --normal-font-size: 16px;
+  --gray-500: hsl(0, 0%, 42%);
+  --gray-900: hsl(0, 0%, 7%);
+  --white: hsl(0, 0%, 100%);
+  --yellow: hsl(47, 88%, 63%);
+}
 
-
-
-
-# Front-end Style Guide
-
-## Layout
-
-The designs were created to the following widths:
-
-- Mobile: 375px
-- Desktop: 1440px
-
-> 💡 These are just the design sizes. Ensure content is responsive and meets WCAG requirements by testing the full range of screen sizes from 320px to large screens.
-
-## Colors
-
-- Yellow: hsl(47, 88%, 63%)
-
-- White: hsl(0, 0%, 100%)
-
-- Gray 500: hsl(0, 0%, 42%)
-- Gray 950: hsl(0, 0%, 7%)
-
-## Typography
-
-### Body Copy
-
-- Font size (paragraph): 16px
-
-### Font
-
-- Family: [Figtree](https://fonts.google.com/specimen/Figtree)
-- Weights: 500, 800
-
-> 💎 This is a free+ challenge. So, if you want to see all the design details and practice working with professional tools like Figma, you can download the design file from where you downloaded the starter code.
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  box-sizing: border-box;
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  font-weight: var(--normal-font-weight);
+  background-color: var(--yellow);
+}
+.container {
+  border: black 1px solid;
+  border-radius: 20px;
+  box-shadow: 7px 7px 0px 0px #000000;
+  max-width: 330px;
+  margin: 0 auto;
+  margin-top: 200px;
+  padding: 22px;
+  background-color: white;
+}
+.image img {
+  max-width: 100%;
+}
+p.button {
+  display: inline-block;
+  background-color: var(--yellow);
+  font-weight: var(--bolder-font-weight);
+  padding: 4px 14px;
+  border-radius: 8px;
+}
+.title {
+  font-size: 22px;
+  font-weight: var(--bolder-font-weight);
+}
+.content p {
+  margin-top: 15px;
+  line-height: 150%;
+}
+.description {
+  color: var(--gray-500);
+}
+.avatar {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+  gap: 20px;
+  font-weight: var(--bolder-font-weight);
+}
+.avatar img {
+  max-width: 10%;
+}
+@media screen and (max-width: 440px){
+    .container{
+        max-width: 70%;
+    }
+}
